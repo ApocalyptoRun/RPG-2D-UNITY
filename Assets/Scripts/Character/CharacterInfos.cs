@@ -21,7 +21,7 @@ public class CharacterInfos : MonoBehaviour
     {
         manager = GameManager.getInstance();
         initHealth();
-        TakeDamage(4);
+        TakeDamage(0);
     }
 
     private void Update()
