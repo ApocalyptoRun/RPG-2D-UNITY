@@ -1169,7 +1169,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Money
+  m_text: 5
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 74a01093cecafc444acf3a9ec146bf7b, type: 2}
   m_sharedMaterial: {fileID: -6358396125734145729, guid: 74a01093cecafc444acf3a9ec146bf7b, type: 2}
@@ -1427,7 +1427,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ab5684b41d13f46bf95c1fe8b5c62b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moneyCount: 0
   health: 5
   heartPrefab: {fileID: 1962230594947105235, guid: db01b85ba04a78944b605031dca06a17, type: 3}
   heartParent: {fileID: 254843008}

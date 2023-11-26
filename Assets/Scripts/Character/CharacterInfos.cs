@@ -2,11 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.InputSystem;
 
+public enum ItemID
+{
+    Money = 0,
+}
+
+[System.Serializable]
+public class Item
+{
+    [SerializeField] private string name;
+    public ItemID _id;                
+    public int number = 0;              
+}
 
 public class CharacterInfos : MonoBehaviour
 {
-    public int moneyCount = 0;
+    private static Item[] inventory; 
     private int maxHealth = 5;
     public int health = 5;
 
@@ -20,13 +33,15 @@ public class CharacterInfos : MonoBehaviour
     private void Start()
     {
         manager = GameManager.getInstance();
+        inventory = new Item[1];
+        inventory[0] = new Item();
         initHealth();
         TakeDamage(0);
     }
 
     private void Update()
     {
-        moneyText.text = " : " + moneyCount;
+        moneyText.text = " : " + inventory[((int)ItemID.Money)].number;
     }
 
     private void initHealth()
@@ -53,4 +68,8 @@ public class CharacterInfos : MonoBehaviour
         }
     }
 
+    public static void AddItem(ItemID _id, int _number)
+    {
+        inventory[(int)_id].number += _number;
+    }
 }
